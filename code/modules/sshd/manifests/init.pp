@@ -17,7 +17,7 @@ class sshd {
         }
 
         # Part 2
-        service { "ssh":
+        service { "sshd":
                 enable    => true,
                 ensure    => running,
                 subscribe => File["/etc/ssh/sshd_config"],
