@@ -10,7 +10,7 @@ class sshd {
                 mode    => '444',
                 owner   => 'root',
                 group   => 'root',
-                source  => "puppet:///modules/sshd/sshd_config",
+                source  => "/modules/sshd/sshd_config",
                 require => Package["openssh-server"],
         }
 
