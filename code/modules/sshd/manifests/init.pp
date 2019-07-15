@@ -3,11 +3,7 @@ class sshd {
         package { "openssh-server":
                 ensure => installed,
                 provider => apt,
-                before   => [
-                        File["/etc/ssh/sshd_config"],
-                        File["/home/ubuntu/.ssh/authorized_keys"],
-                ],
-        }
+                }
 
         # Part 3
         file { "/etc/ssh/sshd_config":
