@@ -14,7 +14,7 @@ class sshd {
                 require => Package["openssh-server"],
         }
 
-        service { "ssh":
+        service { "sshd":
                 enable    => true,
                 ensure    => running,
                 subscribe => File["/etc/ssh/sshd_config"],
