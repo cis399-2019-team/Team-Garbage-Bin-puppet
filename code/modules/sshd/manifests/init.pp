@@ -10,11 +10,11 @@ class sshd {
                 mode    => '444',
                 owner   => 'root',
                 group   => 'root',
-                source  => "/modules/sshd/sshd_config",
+                source  => "puppet:///modules/sshd/sshd_config",
                 require => Package["openssh-server"],
         }
 
-        service { "sshd":
+        service { "ssh":
                 enable    => true,
                 ensure    => running,
                 subscribe => File["/etc/ssh/sshd_config"],
