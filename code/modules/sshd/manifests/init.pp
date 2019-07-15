@@ -1,11 +1,9 @@
 class sshd {
-        # Part 1
         package { "openssh-server":
                 ensure => installed,
                 provider => apt,
-                }
+        }
 
-        # Part 3
         file { "/etc/ssh/sshd_config":
                 ensure  => present,
                 notify  => Service["sshd"],
@@ -16,7 +14,6 @@ class sshd {
                 require => Package["openssh-server"],
         }
 
-        # Part 2
         service { "sshd":
                 enable    => true,
                 ensure    => running,
@@ -26,7 +23,6 @@ class sshd {
                 ],
         }
 
-        # Part 4
         ssh_authorized_key { "llhyatt98_key":
         ensure => present,
         user => "ubuntu",
