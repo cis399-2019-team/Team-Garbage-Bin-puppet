@@ -1,6 +1,6 @@
 class mail {
     package { "mailutils":
-        ensure => installed;
+        ensure => installed,
     }
 
     service { "postfix",
