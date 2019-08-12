@@ -4,7 +4,7 @@ node ip-52-12-236-183 {
     include apache2
 }
 
-node ip-34-214-109-239 {
+node ip-10-0-2-219 {
     include puppet
     include sshd
     include apache2
