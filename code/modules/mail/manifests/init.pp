@@ -3,7 +3,7 @@ class mail {
         ensure => installed,
     }
 
-    service { "postfix",
+    service { "postfix":
         enable => true,
         ensure => running,
     }
