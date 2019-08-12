@@ -15,7 +15,7 @@ class apache2 {
 	file { "/var/www/html":
 		ensure  => directory,
 		recurse => true,
-		mode    => '444',
+		mode    => '744',
 		owner   => 'root',
 		group   => 'root',
 		source  => "puppet:///modules/apache2/html",
