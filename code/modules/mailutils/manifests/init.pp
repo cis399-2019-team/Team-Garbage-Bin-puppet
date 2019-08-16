@@ -1,4 +1,4 @@
-class mail {
+class mailutils {
     package { "mailutils":
         ensure => installed,
     }
